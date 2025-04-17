@@ -1,0 +1,47 @@
+
+@font-face {
+    font-family: "purista";
+    src: url("../fonts/bold.ttf");
+    font-weight: bold;
+}
+
+.teamName {
+    padding: 20px;
+    margin: 10px;
+    background: #111;
+    font-family: "purista", serif;
+    font-size: 53pt;
+    text-align: left;
+    width: fit-content;
+    color: #fff;
+}
+
+.teamMember {
+    padding: 20px;
+    margin: 10px;
+    background: #111;
+    font-family: "purista", serif;
+    font-size: 30pt;
+    text-align: left;
+    width: fit-content;
+    color: #fff;
+}
+
+.teamBox {
+    /* to position it in front of the other content */
+    position: relative;
+    z-index: 10;
+    /* to prevent scrollbar appearing */
+}
+
+.overlay {
+    position: absolute;
+    /*width: 100%;
+    height: 100%;*/
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(51,51,51,0.7);
+    z-index: -10;
+}

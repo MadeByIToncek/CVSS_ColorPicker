@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/bulma.min.css"/>
+    <link href="./style/index.css" rel="stylesheet">
+    <script src="./script/jquery.min.js" async></script>
+    <script src="./script/index.js" async></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>CVSS Color picker</title>
+</head>
+<body>
+<div class="columns overlay is-desktop">
+    <div class="column">
+        <div class="box" style="margin: 10px;">
+            <div class="field">
+                <label class="label">Jméno týmu</label>
+                <div class="control">
+                    <label>
+                        <input class="input" value="Jméno týmu" type="email" placeholder="e.g. Roboťáci"
+                               oninput="changeTeamName(this.value)"/>
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Jména hráčů (odděleno středníky)</label>
+                <div class="control">
+                    <label>
+                        <input class="input" value="Roboťák 1;Roboťák 2;Roboťák 3" type="email"
+                               placeholder="e.g. Roboťák 1, Roboťák 2" oninput="changeTeamMembers(this.value);"/>
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Barva pozadí jména týmu</label>
+                <div class="control">
+                    <label>
+                        <input class="input" value="#111111" type="color" placeholder="Text input"
+                               oninput="changeTeamNameColor(this.value)">
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Barva pozadí jména hráčů</label>
+                <div class="control">
+                    <label>
+                        <input class="input" value="#111111" type="color" placeholder="Text input"
+                               oninput="changeTeamMemberColor(this.value)">
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success" onclick="results()">
+                        Vygenerovat výsledky
+                    </button>
+                </p>
+            </div>
+        </div>
+
+        <div id="results"></div>
+    </div>
+    <div class="column " style="background-color:#000;">
+        <div class="teamBox">
+            <p class="teamName" id="teamName">Jméno týmu</p>
+        </div>
+        <div id="members">
+        <div class="teamBox">
+            <p class="teamMember">Roboťák 1</p>
+        </div>
+        <div class="teamBox">
+            <p class="teamMember">Roboťák 2</p>
+        </div>
+        <div class="teamBox">
+            <p class="teamMember">Roboťák 3</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
